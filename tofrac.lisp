@@ -2,6 +2,8 @@
 
                                         ; Convert decimal number to fraction in lowest terms.
 
+;; Disallow tricks like #.(exit) from allowing people to run arbitrary code.
+(setf *read-eval* nil)
 
 (defun help () (format t "Print decimal numbers as fractions in lowest terms.~%") (exit))
 
